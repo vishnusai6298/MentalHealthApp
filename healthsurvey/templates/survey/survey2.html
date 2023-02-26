@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Dosha Quiz Form</title>
+</head>
+<body>
+  <form method="POST" action="{% url 'submit' %}">
+    {% csrf_token %}
+    <h2>Question 1</h2>
+    <p>{{ form.q1.label }}</p>
+    {% for radio in form.q1 %}
+      <ul><label>{{ radio }} {{ radio.choice_label }}</label></ul>
+    {% endfor %}
+    <h2>Question 2</h2>
+    <p>{{ form.q2.label }}</p>
+    {% for radio in form.q2 %}
+      <ul><label>{{ radio }} {{ radio.choice_label }}</label></ul>
+    {% endfor %}
+    <h2>Question 3</h2>
+    <p>{{ form.q3.label }}</p>
+    {% for radio in form.q3 %}
+      <ul><label>{{ radio }} {{ radio.choice_label }}</label></ul>
+    {% endfor %}
+    <h2>Question 4</h2>
+    <p>{{ form.q4.label }}</p>
+    {% for radio in form.q4 %}
+    <ul><label>{{ radio }} {{ radio.choice_label }}</label></ul>
+    {% endfor %}
+    <h2>Question 5</h2>
+    <p>{{ form.q5.label }}</p>
+    {% for radio in form.q5 %}
+    <ul><label>{{ radio }} {{ radio.choice_label }}</label></ul>
+    {% endfor %}
+    <h2>Question 6</h2>
+    <p>{{ form.q6.label }}</p>
+    {% for radio in form.q6 %}
+    <ul> <label>{{ radio }} {{ radio.choice_label }}</label></ul>
+    {% endfor %}
+    <h2>Question 7</h2>
+    <p>{{ form.q7.label }}</p>
+    {% for radio in form.q7 %}
+      <ul><label>{{ radio }} {{ radio.choice_label }}</label></ul>
+    {% endfor %}
+    <h2>Question 8</h2>
+    <p>{{ form.q8.label }}</p>
+    {% for radio in form.q8 %}
+    <ul><label>{{ radio }} {{ radio.choice_label }}</label></ul>
+    {% endfor %}
+    <h2>Question 9</h2>
+    <p>{{ form.q9.label }}</p>
+    {% for radio in form.q9 %}
+      <ul><label>{{ radio }} {{ radio.choice_label }}</label></ul>
+    {% endfor %}
+    <h2>Question 10</h2>
+    <p>{{ form.q10.label }}</p>
+    {% for radio in form.q10 %}
+    <ul><label>{{ radio }} {{ radio.choice_label }}</label></ul>
+    {% endfor %}
+    <h2>Question 11</h2>
+    <p>{{ form.q11.label }}</p>
+    {% for radio in form.q11 %}
+    <ul> <label>{{ radio }} {{ radio.choice_label }}</label></ul>
+    {% endfor %}
+    <h2>Question 12</h2>
+    <p>{{ form.q12.label }}</p>
+    {% for radio in form.q12 %}
+    <ul> <label>{{ radio }} {{ radio.choice_label }}</label></ul>
+    {% endfor %}
+    <input type="submit" value="Submit">
+  </form>
+</body>
+</html>
