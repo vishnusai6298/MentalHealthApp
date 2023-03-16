@@ -31,7 +31,7 @@ from .forms import MentalHealthSurveyForm
 
 def form(request):
     form = MentalHealthSurveyForm()
-    return render(request, 'survey/survey2.html', {'form': form})
+    return render(request, 'survey/survey4.html', {'form': form})
 
 def submit(request):
     if request.method == 'POST':

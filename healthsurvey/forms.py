@@ -6,6 +6,7 @@ class MentalHealthSurveyForm(forms.Form):
     stress = forms.IntegerField(label='On a scale of 1-10, how much stress are you feeling?')
     coping_mechanisms = forms.IntegerField(label='What coping mechanisms do you use to manage your mental health?')
     '''
+
     q1 = forms.ChoiceField(
         label="Memory:Which of the following best describes your memory",
         choices=(('Vatta', 'I have some difficulty in remembering things'), ('Pitta', 'I have a good memory in general'), ('Kapha', 'I have a good memory, I can remember things from the past that not many other can')),
@@ -16,7 +17,6 @@ class MentalHealthSurveyForm(forms.Form):
                  ('Pitta', 'I can focus if the matter is interesting and logical'), 
                  ('Kapha', 'I usually have no trouble concentrating')),
         widget=forms.RadioSelect)
-    # Add the remaining questions here
     q3= forms.ChoiceField(
         label="Changes to Plans:How would you react if there was a sudden change in your schedule",
         choices=(('Vatta', 'I usually dont get angry, I am happy to go with the flow'), 

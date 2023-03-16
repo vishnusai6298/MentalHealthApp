@@ -25,43 +25,53 @@
       background-color: #007bff;
       border-color: #007bff;
     }
-    /* Styles for the radio button options */
-.survey-form label {
-  display: block;
-  margin-bottom: 10px;
-  font-weight: bold;
-}
+   
 
-.survey-form input[type=radio] {
-  margin-right: 5px;
-}
-
-.survey-form input[type=radio]:checked + span {
-  font-weight: bold;
-  color: #007bff;
-}
-
-.survey-form span {
-  font-weight: normal;
-  color: #555;
-}
-
-/* Styles for the form submission button */
-.survey-form input[type=submit] {
-  display: block;
-  margin-top: 20px;
-  padding: 10px 20px;
-  background-color: #007bff;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 16px;
-}
-
-.survey-form input[type=submit]:hover {
-  background-color: #0056b3;
-}
+    body {
+      background-size: cover;
+      font-family: Arial, sans-serif;
+    }
+    .survey-form {
+      background-color: rgba(255, 255, 255, 0.8);
+      border-radius: 10px;
+      margin: 0 auto;
+      padding: 30px;
+      max-width: 800px;
+    }
+    .survey-form h2 {
+      margin-top: 0;
+    }
+    .survey-form .form-group {
+      margin-bottom: 20px;
+    }
+    .survey-form label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+    .survey-form .form-check {
+      display: flex;
+      align-items: center;
+      margin-bottom: 5px;
+    }
+    .survey-form input[type="submit"] {
+      background-color: #007bff;
+      border: none;
+      border-radius: 5px;
+      color: #fff;
+      cursor: pointer;
+      font-size: 16px;
+      padding: 10px 20px;
+    }
+    @media screen and (max-width: 600px) {
+      .survey-form {
+        padding: 15px;
+      }
+      .survey-form input[type="submit"] {
+        font-size: 14px;
+        padding: 8px 16px;
+      }
+    }
 
   </style>
 </head>

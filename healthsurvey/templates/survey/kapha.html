@@ -1,10 +1,34 @@
+{% load static %}
 <!DOCTYPE html>
 <html>
 <head>
   <meta charset="UTF-8">
   <title>Kapha Personality</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+  <link rel="stylesheet" href="{% static 'css/custom.css' %}">
+
+<style>
+body {
+  background-color: #f2f2f2;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.landing-page {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 50px;
+}
+
+.landing-page p {
+  text-align: center;
+}
+</style>
 </head>
 <body>
+
     <h1>Kapha</h1>
     <p>
         Kaphas are naturally emotional in temperament and have tremendous love, devotion and loyalty. Negatively, they can have great desire, and may be possessive and greedy. They are romantic, sentimental, and cry easily.
