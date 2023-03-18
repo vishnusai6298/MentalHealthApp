@@ -1,31 +1,58 @@
-
-
+{% load static %}
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="UTF-8">
   <title>Vatta Personality</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+  <link rel="stylesheet" href="{% static 'css/custom.css' %}">
+  <style>
+    .content {
+      display: block;
+      border: 1px solid #777;
+      border-radius: 2px;
+      font-family: inherit;
+      padding: 10px;
+      display: block;
+      width: 95%;
+    }
+  </style>
 </head>
+
 <body>
-    <h1>Vatta</h1>
-    <p>
-        Vata types are quick and agile in their minds with often changing
-interests and inclinations. They are talkative, informed and
-intellectual and can understand many different points of view their minds easily
-waver and can wander out of control. While they may have some knowledge of many
-different subjects, the tend to lack in depth knowledge about one subject specifically.
+  <div class="row justify-content-center">
 
-They ack determinism and self confidence and often have a negative perception of themselves.
-Vata types suffer most from fear, which is their first reaction to anything new or strange. They like to worry easily get afflicted by anxiety, and usually lack stability. They get saced out and may be absent-minded. Their memory and short-term and erratic. They suffer quickly from overwork and over-exercise and tend to overextend themselves in whatever they do.
-They are good at creative pursuits. They can be highly sociable and like to mix with people of all types. But, when there is too much vata, they tend to become loners and hypersensitive to contact. This is generally because they have too much to say and do not know how to relate it.
-They are the most adaptable to change.
-If there is too much vata, there is a lot of instability and agitation in the mind which results in exccesive worrying and makes problems appear larger than they are. They are prone to premature action and inappropriate action.
-High vata manifests as fear, alienation, and possible nervous breakdowns. They can also suffer from insomnia, tremors, palpitations and rapid shifts of mood.
+    <div class="col-md-6">
+      <div class="card-body">
+        <h2 class="card-title text-center">Vatta</h2>
+        <div class="content">
+          <p style="text-align: justify;">
+            Vata types are quick and agile in their minds with often changing
+            interests and inclinations. They are talkative, informed and
+            intellectual and can understand many different points of view their minds easily
+            waver and can wander out of control. While they may have some knowledge of many
+            different subjects, the tend to lack in depth knowledge about one subject specifically.
 
- 
+            They ack determinism and self confidence and often have a negative perception of themselves.
+            Vata types suffer most from fear, which is their first reaction to anything new or strange. They like to
+            worry easily get afflicted by anxiety, and usually lack stability. They get saced out and may be
+            absent-minded. Their memory and short-term and erratic. They suffer quickly from overwork and over-exercise
+            and tend to overextend themselves in whatever they do.
+            They are good at creative pursuits. They can be highly sociable and like to mix with people of all types.
+            But, when there is too much vata, they tend to become loners and hypersensitive to contact. This is
+            generally because they have too much to say and do not know how to relate it.
+            They are the most adaptable to change.
+            If there is too much vata, there is a lot of instability and agitation in the mind which results in
+            exccesive worrying and makes problems appear larger than they are. They are prone to premature action and
+            inappropriate action.
+            High vata manifests as fear, alienation, and possible nervous breakdowns. They can also suffer from
+            insomnia, tremors, palpitations and rapid shifts of mood.
+          </p>
+        </div>
 
-    </p>
+      </div>
+    </div>
+  </div>
 </body>
-
-
-

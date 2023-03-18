@@ -1,19 +1,51 @@
+{% load static %}
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="UTF-8">
   <title>Pitta Personality</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+  <link rel="stylesheet" href="{% static 'css/custom.css' %}">
+  <style>
+    .content {
+      display: block;
+      border: 1px solid #777;
+      border-radius: 2px;
+      font-family: inherit;
+      padding: 10px;
+      display: block;
+      width: 95%;
+    }
+  </style>
 </head>
+
 <body>
-    <h1>Pitta</h1>
-    <p>
-        Pitta types are intelligent, perceptive and discriminating. They have sharp minds and are able to see the world in a clear and systematic manner. However, they can also be opinionated, judgmental and self -righteous.
-They are prone to anger and tend to be aggressive and domineering. They are not afraid of conflict and can be more aggressive when the situation presents itself. They have probing minds and can be good at research. They also have good debating skills.
-They have a hard time seeing someone else’s point of view and may lack compassion. They prefer hierarchy and authority over consensus. They are highly determined people.
-They usually have food self-control but they can be self-absorbed and anti-social.
-High pitta causes aggressiveness and violence.
+  <div class="row justify-content-center">
 
- 
+    <div class="col-md-6">
+      <div class="card-body">
+        <h2 class="card-title text-center">Pitta</h2>
+        <div class="content">
+          <p style="text-align: justify;">
+            Pitta types are intelligent, perceptive and discriminating. They have sharp minds and are able to see the
+            world in a clear and systematic manner. However, they can also be opinionated, judgmental and self
+            -righteous.
+            They are prone to anger and tend to be aggressive and domineering. They are not afraid of conflict and can
+            be more aggressive when the situation presents itself. They have probing minds and can be good at research.
+            They also have good debating skills.
+            They have a hard time seeing someone else’s point of view and may lack compassion. They prefer hierarchy and
+            authority over consensus. They are highly determined people.
+            They usually have food self-control but they can be self-absorbed and anti-social.
+            High pitta causes aggressiveness and violence.
 
-    </p>
+
+
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </div>
 </body>

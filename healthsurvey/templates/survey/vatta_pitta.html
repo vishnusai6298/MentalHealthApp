@@ -1,19 +1,46 @@
+{% load static %}
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="UTF-8">
-  <title>Vatta-Pitta Personality</title>
+  <title>Vatta Pitta Kapha Personality</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+  <link rel="stylesheet" href="{% static 'css/custom.css' %}">
+  <style>
+    .content {
+      display: block;
+      border: 1px solid #777;
+      border-radius: 2px;
+      font-family: inherit;
+      padding: 10px;
+      display: block;
+      width: 95%;
+    }
+  </style>
 </head>
+
 <body>
-    <h1>Vatta-Pitta</h1>
-    <p>
-        VP types have the volatility of air and fire combined. Fear and anger mix within them in unpredictable way. If something doesn’t make them fearful, it makes them angry.
-They often look for someone who they can unload their negative emotions on.
-They find it difficult to withstand criticism.
-They are generally highly intelligent and require a lifestyle that can accommodate their volatility.
-They will thrive in an environment that supports them and creates a safe space for them to express their volatility.
+  <div class="row justify-content-center">
 
-        
+    <div class="col-md-6">
+      <div class="card-body">
+        <h2 class="card-title text-center">Vatta-Pitta</h2>
+        <div class="content">
+          <p style="text-align: justify;">
+            VP types have the volatility of air and fire combined. Fear and anger mix within them in unpredictable way.
+            If something doesn’t make them fearful, it makes them angry.
+            They often look for someone who they can unload their negative emotions on.
+            They find it difficult to withstand criticism.
+            They are generally highly intelligent and require a lifestyle that can accommodate their volatility.
+            They will thrive in an environment that supports them and creates a safe space for them to express their
+            volatility.
 
-    </p>
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </div>
 </body>

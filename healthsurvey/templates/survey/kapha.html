@@ -1,44 +1,51 @@
 {% load static %}
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="UTF-8">
   <title>Kapha Personality</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
   <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
   <link rel="stylesheet" href="{% static 'css/custom.css' %}">
-
-<style>
-body {
-  background-color: #f2f2f2;
-  font-family: 'Open Sans', sans-serif;
-  font-size: 16px;
-  line-height: 1.5;
-}
-
-.landing-page {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 50px;
-}
-
-.landing-page p {
-  text-align: center;
-}
-</style>
+  <style>
+    .content {
+      display: block;
+      border: 1px solid #777;
+      border-radius: 2px;
+      font-family: inherit;
+      padding: 10px;
+      display: block;
+      width: 95%;
+    }
+  </style>
 </head>
+
 <body>
+  <div class="row justify-content-center">
 
-    <h1>Kapha</h1>
-    <p>
-        Kaphas are naturally emotional in temperament and have tremendous love, devotion and loyalty. Negatively, they can have great desire, and may be possessive and greedy. They are romantic, sentimental, and cry easily.
-They are slower in learning than others but they retain what they learn well. They are better at finishing things than they are at starting something new. They are natural followers and like to work in association or within large teams.
-They are stable but can sometimes stagnate. They don’t like change and find it very difficult to change even when they want to. They are friendly to people they know but have difficulty in relating to foreigners.
-Kapha types are least likely to express anti-social behavior but they are preoccupied with what others think about them.
-High kaha cuses metal dullness and poor perception and they tend to suffer from a lack of motivation.
-They tend to want to own and control everything and have a high degree of possessiveness
-They are prone to over-sleeping overindulging.
- 
+    <div class="col-md-6">
+      <div class="card-body">
+        <h2 class="card-title text-center">Kapha</h2>
+        <div class="content">
+          <p style="text-align: justify;">
+            Kaphas are naturally emotional in temperament and have tremendous love, devotion and loyalty. Negatively,
+            they can have great desire, and may be possessive and greedy. They are romantic, sentimental, and cry
+            easily.
+            They are slower in learning than others but they retain what they learn well. They are better at finishing
+            things than they are at starting something new. They are natural followers and like to work in association
+            or within large teams.
+            They are stable but can sometimes stagnate. They don’t like change and find it very difficult to change even
+            when they want to. They are friendly to people they know but have difficulty in relating to foreigners.
+            Kapha types are least likely to express anti-social behavior but they are preoccupied with what others think
+            about them.
+            High kaha cuses metal dullness and poor perception and they tend to suffer from a lack of motivation.
+            They tend to want to own and control everything and have a high degree of possessiveness
+            They are prone to over-sleeping overindulging.
+          </p>
+        </div>
 
-    </p>
+      </div>
+    </div>
+  </div>
 </body>
