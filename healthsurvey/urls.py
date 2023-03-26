@@ -1,9 +1,11 @@
 from django.urls import path
-from .views import form, submit, vatta, pitta, kapha,vatta_kapha,vatta_pitta,pitta_kapha,vatta_pitta_kapha,none
+from .views import home, form, submit, vatta, pitta, kapha, vatta_kapha, vatta_pitta, pitta_kapha, vatta_pitta_kapha, none, form_physical, submit_physical
 
 urlpatterns = [
-    path('', form, name='form'),
+    path('form', form_physical, name='form_physical'),
+    path('', home, name='home'),
     path('survey/', submit, name='submit'),
+    path('physicalsurvey/', submit_physical, name='submit_physical'),
     path('vatta/', vatta, name='vatta'),
     path('pitta/', pitta, name='pitta'),
     path('kapha/', kapha, name='kapha'),
