@@ -106,9 +106,9 @@
     <div class="card-body">
 
       <div class="col-md-12">
-        <h2 class="card-title text-center mb-5">Mental Health Survey</h2>
+        <h2 class="card-title text-center mb-5">Mental Dosha Survey</h2>
 
-        <form class="survey-form" method="POST" action="{% url 'submit' %}">
+        <form class="survey-form" method="POST" action="{% url 'submit_mentaldosha' %}">
           {% csrf_token %}
           <h3>Question 1</h3>
           <div class="form-group">

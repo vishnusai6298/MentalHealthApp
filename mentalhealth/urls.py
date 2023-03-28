@@ -20,5 +20,5 @@ from healthsurvey import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('mentalhealth/', include('healthsurvey.urls')),
+    path('survey/', include('healthsurvey.urls')),
 ]

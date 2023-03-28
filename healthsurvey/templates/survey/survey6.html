@@ -1,0 +1,671 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Personality Survey Form</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/custom.css' %}">
+
+    <style>
+        body {
+            background-color: #f7f7f7;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .btn-primary {
+            background-color: #007bff;
+            border-color: #007bff;
+        }
+
+        .survey-form {
+            display: block;
+            border: 1px solid #777;
+            border-radius: 2px;
+            font-family: inherit;
+            padding: 10px;
+            display: block;
+            width: 95%;
+        }
+
+        body {
+            background-size: cover;
+            font-family: Arial, sans-serif;
+        }
+
+        .survey-form {
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            margin: 0 auto;
+            padding: 30px;
+            max-width: 800px;
+        }
+
+        .survey-form h2 {
+            margin-top: 0;
+        }
+
+        .survey-form .form-group {
+            margin-bottom: 20px;
+            font-weight: bold;
+            padding: 2%;
+        }
+
+        .survey-form label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: normal;
+            padding: 2px;
+            padding-left: 8px;
+        }
+
+        .survey-form .form-check {
+            display: flex;
+            align-items: center;
+            margin-bottom: 5px;
+            padding-left: 5%;
+        }
+
+        .survey-form input[type="submit"] {
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            color: #fff;
+            cursor: pointer;
+            font-size: 16px;
+            padding: 10px 20px;
+        }
+
+        @media screen and (max-width: 600px) {
+            .survey-form {
+                padding: 15px;
+            }
+
+            .survey-form input[type="submit"] {
+                font-size: 14px;
+                padding: 8px 16px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="row justify-content-center">
+
+        <div class="card-body">
+
+            <div class="col-md-12">
+                <h2 class="card-title text-center mb-5">Physical Dosha Survey</h2>
+
+                <form class="survey-form" method="POST" action="{% url 'submit_physical' %}">
+                    {% csrf_token %}
+                    <h3>Question 1</h3>
+                    <div class="form-group">
+                        <p>{{ form.q1.label }}</p>
+                        {% for radio in form.q1 %}
+                        <div class="form-check">
+                            {{ radio.tag }}
+                            <label for="{{ radio.id}}">{{ radio.choice_label }}</label>
+                        </div>
+                        {% endfor %}
+                    </div>
+
+                    <h3>Question 2</h3>
+                    <div class="form-group">
+                        <p>{{ form.q2.label }}</p>
+                        {% for radio in form.q2 %}
+                        <div class="form-check">
+                            {{ radio.tag }}
+                            <label for="{{ radio.id}}">{{ radio.choice_label }}</label>
+                        </div>
+                        {% endfor %}
+                    </div>
+                    <h3>Question 3</h3>
+                    <div class="form-group">
+                        <p>{{ form.q3.label }}</p>
+                        {% for radio in form.q3 %}
+                        <div class="form-check">
+                            {{ radio.tag }}
+                            <label for="{{ radio.id}}">{{ radio.choice_label }}</label>
+                        </div>
+                        {% endfor %}
+                    </div>
+
+                    <h3>Question 4</h3>
+                    <div class="form-group">
+                        <p>{{ form.q4.label }}</p>
+                        {% for radio in form.q4 %}
+                        <div class="form-check">
+                            {{ radio.tag }}
+                            <label for="{{ radio.id}}">{{ radio.choice_label }}</label>
+                        </div>
+                        {% endfor %}
+                    </div>
+
+                    <h3>Question 5</h3>
+                    <div class="form-group">
+                        <p>{{ form.q5.label }}</p>
+                        {% for radio in form.q5 %}
+                        <div class="form-check">
+                            {{ radio.tag }}
+                            <label for="{{ radio.id}}">{{ radio.choice_label }}</label>
+                        </div>
+                        {% endfor %}
+                    </div>
+
+                    <h3>Question 6</h3>
+                    <div class="form-group">
+                        <p>{{ form.q6.label }}</p>
+                        {% for radio in form.q6 %}
+                        <div class="form-check">
+                            {{ radio.tag }}
+                            <label for="{{ radio.id}}">{{ radio.choice_label }}</label>
+                        </div>
+                        {% endfor %}
+                    </div>
+
+                    <h3>Question 7</h3>
+                    <div class="form-group">
+                        <p>{{ form.q7.label }}</p>
+                        {% for radio in form.q7 %}
+                        <div class="form-check">
+                            {{ radio.tag }}
+                            <label for="{{ radio.id}}">{{ radio.choice_label }}</label>
+                        </div>
+                        {% endfor %}
+                    </div>
+
+                    <h3>Question 8</h3>
+                    <div class="form-group">
+                        <p>{{ form.q8.label }}</p>
+                        {% for radio in form.q8 %}
+                        <div class="form-check">
+                            {{ radio.tag }}
+                            <label for="{{ radio.id}}">{{ radio.choice_label }}</label>
+                        </div>
+                        {% endfor %}
+                    </div>
+
+                    <h3>Question 9</h3>
+                    <div class="form-group">
+                        <p>{{ form.q9.label }}</p>
+                        {% for radio in form.q9 %}
+                        <div class="form-check">
+                            {{ radio.tag }}
+                            <label for="{{ radio.id}}">{{ radio.choice_label }}</label>
+                        </div>
+                        {% endfor %}
+                    </div>
+
+                    <h3>Question 10</h3>
+                    <div class="form-group">
+                        <p>{{ form.q10.label }}</p>
+                        {% for radio in form.q10 %}
+                        <div class="form-check">
+                            {{ radio.tag }}
+                            <label for="{{ radio.id}}">{{ radio.choice_label }}</label>
+                        </div>
+                        {% endfor %}
+                    </div>
+
+                    <h3>Question 11</h3>
+                    <div class="form-group">
+                        <p>{{ form.q11.label }}</p>
+                        {% for radio in form.q11 %}
+                        <div class="form-check">
+                            {{ radio.tag }}
+                            <label for="{{ radio.id}}">{{ radio.choice_label }}</label>
+                        </div>
+                        {% endfor %}
+                    </div>
+
+                    <h3>Question 12</h3>
+                    <div class="form-group">
+                        <p>{{ form.q12.label }}</p>
+                        {% for radio in form.q12 %}
+                        <div class="form-check">
+                            {{ radio.tag }}
+                            <label for="{{ radio.id}}">{{ radio.choice_label }}</label>
+                        </div>
+                        {% endfor %}
+                    </div>
+                    <h3>Question 13</h3>
+                    <div class="form-group">
+                        <p>{{ form.q13.label }}</p>
+                        {% for radio in form.q13 %}
+                        <div class="form-check">
+                            {{ radio.tag }}
+                            <label for="{{ radio.id }}">{{ radio.choice_label }}</label>
+                        </div>
+                        {% endfor %}
+                    </div>
+
+                    <h3>Question 14</h3>
+                    <div class="form-group">
+                        <p>{{ form.q14.label }}</p>
+                        {% for radio in form.q14 %}
+                        <div class="form-check">
+                            {{ radio.tag }}
+                            <label for="{{ radio.id }}">{{ radio.choice_label }}</label>
+                        </div>
+                        {% endfor %}
+                    </div>
+
+                    <h3>Question 15</h3>
+                    <div class="form-group">
+                        <p>{{ form.q15.label }}</p>
+                        {% for radio in form.q15 %}
+                        <div class="form-check">
+                            {{ radio.tag }}
+                            <label for="{{ radio.id }}">{{ radio.choice_label }}</label>
+                        </div>
+                        {% endfor %}
+                    </div>
+
+                    <h3>Question 16</h3>
+                    <div class="form-group">
+                        <p>{{ form.q16.label }}</p>
+                        {% for radio in form.q16 %}
+                        <div class="form-check">
+                            {{ radio.tag }}
+                            <label for="{{ radio.id }}">{{ radio.choice_label }}</label>
+                        </div>
+                        {% endfor %}
+                    </div>
+
+                    <h3>Question 17</h3>
+                    <div class="form-group">
+                        <p>{{ form.q17.label }}</p>
+                        {% for radio in form.q17 %}
+                        <div class="form-check">
+                            {{ radio.tag }}
+                            <label for="{{ radio.id }}">{{ radio.choice_label }}</label>
+                        </div>
+                        {% endfor %}
+                    </div>
+
+                    <h3>Question 18</h3>
+                    <div class="form-group">
+                        <p>{{ form.q18.label }}</p>
+                        {% for radio in form.q18 %}
+                        <div class="form-check">
+                            {{ radio.tag }}
+                            <label for="{{ radio.id }}">{{ radio.choice_label }}</label>
+                        </div>
+                        {% endfor %}
+                    </div>
+
+                    <h3>Question 19</h3>
+                    <div class="form-group">
+                        <p>{{ form.q19.label }}</p>
+                        {% for radio in form.q19 %}
+                        <div class="form-check">
+                            {{ radio.tag }}
+                            <label for="{{ radio.id }}">{{ radio.choice_label }}</label>
+                        </div>
+                        {% endfor %}
+                    </div>
+
+                    <h3>Question 20</h3>
+                    <div class="form-group">
+                        <p>{{ form.q20.label }}</p>
+                        {% for radio in form.q20 %}
+                        <div class="form-check">
+                            {{ radio.tag }}
+                            <label for="{{ radio.id }}">{{ radio.choice_label }}</label>
+                        </div>
+                        {% endfor %}
+                    </div>
+
+                    <h3>Question 21</h3>
+                    <div class="form-group">
+                        <p>{{ form.q21.label }}</p>
+                        {% for radio in form.q21 %}
+                        <div class="form-check">
+                            {{ radio.tag }}
+                            <label for="{{ radio.id }}">{{ radio.choice_label }}</label>
+                        </div>
+                        {% endfor %}
+                    </div>
+
+                    <h3>Question 22</h3>
+                    <div class="form-group">
+                        <p>{{ form.q22.label }}</p>
+                        {% for radio in form.q22 %}
+                        <div class="form-check">
+                            {{ radio.tag }}
+                            <label for="{{ radio.id }}">{{ radio.choice_label }}</label>
+                        </div>
+                        {% endfor %}
+                    </div>
+
+                    <h3>Question 23</h3>
+                    <div class="form-group">
+                        <p>{{ form.q23.label }}</p>
+                        {% for radio in form.q23 %}
+                        <div class="form-check">
+                            {{ radio.tag }}
+                            <label for="{{ radio.id}}">{{ radio.choice_label }}</label>
+                        </div>
+                        {% endfor %}
+                    </div>
+
+                    <h3>Question 24</h3>
+                    <div class="form-group">
+                        <p>{{ form.q24.label }}</p>
+                        {% for radio in form.q24 %}
+                        <div class="form-check">
+                            {{ radio.tag }}
+                            <label for="{{ radio.id}}">{{ radio.choice_label }}</label>
+                        </div>
+                        {% endfor %}
+                    </div>
+
+                    <h3>Question 25</h3>
+                    <div class="form-group">
+                        <p>{{ form.q25.label }}</p>
+                        {% for radio in form.q25 %}
+                        <div class="form-check">
+                            {{ radio.tag }}
+                            <label for="{{ radio.id}}">{{ radio.choice_label }}</label>
+                        </div>
+                        {% endfor %}
+                    </div>
+
+                    <h3>Question 26</h3>
+                    <div class="form-group">
+                        <p>{{ form.q26.label }}</p>
+                        {% for radio in form.q26 %}
+                        <div class="form-check">
+                            {{ radio.tag }}
+                            <label for="{{ radio.id}}">{{ radio.choice_label }}</label>
+                        </div>
+                        {% endfor %}
+                    </div>
+
+                    <h3>Question 27</h3>
+                    <div class="form-group">
+                        <p>{{ form.q27.label }}</p>
+                        {% for radio in form.q27 %}
+                        <div class="form-check">
+                            {{ radio.tag }}
+                            <label for="{{ radio.id}}">{{ radio.choice_label }}</label>
+                        </div>
+                        {% endfor %}
+                    </div>
+
+                    <h3>Question 28</h3>
+                    <div class="form-group">
+                        <p>{{ form.q28.label }}</p>
+                        {% for radio in form.q28 %}
+                        <div class="form-check">
+                            {{ radio.tag }}
+                            <label for="{{ radio.id}}">{{ radio.choice_label }}</label>
+                        </div>
+                        {% endfor %}
+                    </div>
+
+                    <h3>Question 29</h3>
+                    <div class="form-group">
+                        <p>{{ form.q29.label }}</p>
+                        {% for radio in form.q29 %}
+                        <div class="form-check">
+                            {{ radio.tag }}
+                            <label for="{{ radio.id}}">{{ radio.choice_label }}</label>
+                        </div>
+                        {% endfor %}
+                    </div>
+
+                    <h3>Question 30</h3>
+                    <div class="form-group">
+                        <p>{{ form.q30.label }}</p>
+                        {% for radio in form.q30 %}
+                        <div class="form-check">
+                            {{ radio.tag }}
+                            <label for="{{ radio.id}}">{{ radio.choice_label }}</label>
+                        </div>
+                        {% endfor %}
+                    </div>
+
+                    <h3>Question 31</h3>
+                    <div class="form-group">
+                        <p>{{ form.q31.label }}</p>
+                        {% for radio in form.q31 %}
+                        <div class="form-check">
+                            {{ radio.tag }}
+                            <label for="{{ radio.id}}">{{ radio.choice_label }}</label>
+                        </div>
+                        {% endfor %}
+                    </div>
+
+                    <h3>Question 32</h3>
+                    <div class="form-group">
+                        <p>{{ form.q32.label }}</p>
+                        {% for radio in form.q32 %}
+                        <div class="form-check">
+                            {{ radio.tag }}
+                            <label for="{{ radio.id}}">{{ radio.choice_label }}</label>
+                        </div>
+                        {% endfor %}
+                    </div>
+                    <h3>Question 33</h3>
+                    <div class="form-group">
+                        <p>{{ form.q33.label }}</p>
+                        {% for radio in form.q33 %}
+                        <div class="form-check">
+                            {{ radio.tag }}
+                            <label for="{{ radio.id}}">{{ radio.choice_label }}</label>
+                        </div>
+                        {% endfor %}
+                    </div>
+
+                    <h3>Question 34</h3>
+                    <div class="form-group">
+                        <p>{{ form.q34.label }}</p>
+                        {% for radio in form.q34 %}
+                        <div class="form-check">
+                            {{ radio.tag }}
+                            <label for="{{ radio.id}}">{{ radio.choice_label }}</label>
+                        </div>
+                        {% endfor %}
+                    </div>
+
+                    <h3>Question 35</h3>
+                    <div class="form-group">
+                        <p>{{ form.q35.label }}</p>
+                        {% for radio in form.q35 %}
+                        <div class="form-check">
+                            {{ radio.tag }}
+                            <label for="{{ radio.id}}">{{ radio.choice_label }}</label>
+                        </div>
+                        {% endfor %}
+                    </div>
+
+                    <h3>Question 36</h3>
+                    <div class="form-group">
+                        <p>{{ form.q36.label }}</p>
+                        {% for radio in form.q36 %}
+                        <div class="form-check">
+                            {{ radio.tag }}
+                            <label for="{{ radio.id}}">{{ radio.choice_label }}</label>
+                        </div>
+                        {% endfor %}
+                    </div>
+
+                    <h3>Question 37</h3>
+                    <div class="form-group">
+                        <p>{{ form.q37.label }}</p>
+                        {% for radio in form.q37 %}
+                        <div class="form-check">
+                            {{ radio.tag }}
+                            <label for="{{ radio.id}}">{{ radio.choice_label }}</label>
+                        </div>
+                        {% endfor %}
+                    </div>
+
+                    <h3>Question 38</h3>
+                    <div class="form-group">
+                        <p>{{ form.q38.label }}</p>
+                        {% for radio in form.q38 %}
+                        <div class="form-check">
+                            {{ radio.tag }}
+                            <label for="{{ radio.id}}">{{ radio.choice_label }}</label>
+                        </div>
+                        {% endfor %}
+                    </div>
+
+
+                    <h3>Question 39</h3>
+                    <div class="form-group">
+                        <p>{{ form.q39.label }}</p>
+                        {% for radio in form.q39 %}
+                        <div class="form-check">
+                            {{ radio.tag }}
+                            <label for="{{ radio.id}}">{{ radio.choice_label }}</label>
+                        </div>
+                        {% endfor %}
+                    </div>
+
+                    <h3>Question 40</h3>
+                    <div class="form-group">
+                        <p>{{ form.q40.label }}</p>
+                        {% for radio in form.q40 %}
+                        <div class="form-check">
+                            {{ radio.tag }}
+                            <label for="{{ radio.id}}">{{ radio.choice_label }}</label>
+                        </div>
+                        {% endfor %}
+                    </div>
+
+                    <h3>Question 41</h3>
+                    <div class="form-group">
+                        <p>{{ form.q41.label }}</p>
+                        {% for radio in form.q41 %}
+                        <div class="form-check">
+                            {{ radio.tag }}
+                            <label for="{{ radio.id}}">{{ radio.choice_label }}</label>
+                        </div>
+                        {% endfor %}
+                    </div>
+
+                    <h3>Question 42</h3>
+                    <div class="form-group">
+                        <p>{{ form.q42.label }}</p>
+                        {% for radio in form.q42 %}
+                        <div class="form-check">
+                            {{ radio.tag }}
+                            <label for="{{ radio.id}}">{{ radio.choice_label }}</label>
+                        </div>
+                        {% endfor %}
+                    </div>
+
+                    <h3>Question 43</h3>
+                    <div class="form-group">
+                        <p>{{ form.q43.label }}</p>
+                        {% for radio in form.q43 %}
+                        <div class="form-check">
+                            {{ radio.tag }}
+                            <label for="{{ radio.id}}">{{ radio.choice_label }}</label>
+                        </div>
+                        {% endfor %}
+                    </div>
+
+                    <h3>Question 44</h3>
+                    <div class="form-group">
+                        <p>{{ form.q44.label }}</p>
+                        {% for radio in form.q44 %}
+                        <div class="form-check">
+                            {{ radio.tag }}
+                            <label for="{{ radio.id}}">{{ radio.choice_label }}</label>
+                        </div>
+                        {% endfor %}
+                    </div>
+
+                    <h3>Question 45</h3>
+                    <div class="form-group">
+                        <p>{{ form.q45.label }}</p>
+                        {% for radio in form.q45 %}
+                        <div class="form-check">
+                            {{ radio.tag }}
+                            <label for="{{ radio.id}}">{{ radio.choice_label }}</label>
+                        </div>
+                        {% endfor %}
+                    </div>
+
+                    <h3>Question 46</h3>
+                    <div class="form-group">
+                        <p>{{ form.q46.label }}</p>
+                        {% for radio in form.q46 %}
+                        <div class="form-check">
+                            {{ radio.tag }}
+                            <label for="{{ radio.id}}">{{ radio.choice_label }}</label>
+                        </div>
+                        {% endfor %}
+                    </div>
+
+                    <h3>Question 47</h3>
+                    <div class="form-group">
+                        <p>{{ form.q47.label }}</p>
+                        {% for radio in form.q47 %}
+                        <div class="form-check">
+                            {{ radio.tag }}
+                            <label for="{{ radio.id}}">{{ radio.choice_label }}</label>
+                        </div>
+                        {% endfor %}
+                    </div>
+
+                    <h3>Question 48</h3>
+                    <div class="form-group">
+                        <p>{{ form.q48.label }}</p>
+                        {% for radio in form.q48 %}
+                        <div class="form-check">
+                            {{ radio.tag }}
+                            <label for="{{ radio.id}}">{{ radio.choice_label }}</label>
+                        </div>
+                        {% endfor %}
+                    </div>
+
+                    <h3>Question 49</h3>
+                    <div class="form-group">
+                        <p>{{ form.q49.label }}</p>
+                        {% for radio in form.q49 %}
+                        <div class="form-check">
+                            {{ radio.tag }}
+                            <label for="{{ radio.id}}">{{ radio.choice_label }}</label>
+                        </div>
+                        {% endfor %}
+                    </div>
+
+                    <h3>Question 50</h3>
+                    <div class="form-group">
+                        <p>{{ form.q50.label }}</p>
+                        {% for radio in form.q50 %}
+                        <div class="form-check">
+                            {{ radio.tag }}
+                            <label for="{{ radio.id}}">{{ radio.choice_label }}</label>
+                        </div>
+                        {% endfor %}
+                    </div>
+
+
+
+                    <input class="survey-form" type="submit" value="Submit">
+                </form>
+            </div>
+        </div>
+    </div>
+    </div>
+</body>
+
+</html>

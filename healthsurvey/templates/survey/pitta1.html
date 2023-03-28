@@ -1,0 +1,114 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Pitta Personality</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/custom.css' %}">
+    <style>
+        .content {
+            display: block;
+            border: 1px solid #777;
+            border-radius: 2px;
+            font-family: inherit;
+            padding: 10px;
+            display: block;
+            width: 95%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="row justify-content-center">
+
+        <div class="col-md-6">
+            <div class="card-body">
+                <h2 class="card-title text-center">Pitta</h2>
+                <div class="content">
+                    <p style="text-align: justify;">
+                        Pitta types are intelligent, perceptive and discriminating. They have sharp minds and are able
+                        to see the
+                        world in a clear and systematic manner. However, they can also be opinionated, judgmental and
+                        self
+                        -righteous.
+                        They are prone to anger and tend to be aggressive and domineering. They are not afraid of
+                        conflict and can
+                        be more aggressive when the situation presents itself. They have probing minds and can be good
+                        at research.
+                        They also have good debating skills.
+                        They have a hard time seeing someone else’s point of view and may lack compassion. They prefer
+                        hierarchy and
+                        authority over consensus. They are highly determined people.
+                        They usually have food self-control but they can be self-absorbed and anti-social.
+                        High pitta causes aggressiveness and violence.
+                    </p>
+                    <h4> Asanas: </h4>
+
+                    <p>
+                        Pittas should perform asanas in a way that is cooling, nurturing, expansive and relaxing. This
+                        requires
+                        relaxing breaths and quiet sitting between strong asanas to release any developing stress. They
+                        should be
+                        careful not to turn their practice into a strong workout in which additional heat is generated
+                        in the body
+                        or in which too much sweating occurs.
+
+                        Putting the body regularly into the shoulder stand or plow pose protects the lunar principle
+                        from the
+                        depleting heat of the solar principle and creates coolness. Such postures help reverse the
+                        positions of the
+                        sun and the moon in the body, bringing balance. This is naturally beneficial for pittas. Spinal
+                        twists, like
+                        Matyendrasana, are also very good for protecting the lunar principle without reducing agni or
+                        the power of
+                        digestion.
+
+                        Pitta people are benefited by postures that aim at releaSing tension from the mid-abdomen, the
+                        small
+                        intestine and liver, where pitta accumulates. Such are the bow pose, cobra pose, boat pose, and
+                        fish pose.
+                        Forward bends are generally good for pitta because they bring more energy to the mid-abdomen and
+                        have a
+                        cooling and grounding effect if done gently. Backbends tend to be heating and so should be done
+                        only with
+                        moderation and followed by cooling postures. Seated twists help clear the liver, detoxifying
+                        pitta.
+
+                    </p>
+                    <ul>
+                        <li>Sitting postures in general, except Lion Pose.
+                        </li>
+                        <li>Moon salutation (Chandra Namaskar).
+                        </li>
+                        <li>Standing poses, especially hips open poses like the Tree Pose, Trikonasana (Triangle Pose),
+                            and Ardha
+                            Chandrasana (Half Moon).
+                        </li>
+                        <li>Legs open standing forward bends like Prasarita Padottanasana I (extended spread legs).
+                        </li>
+                        <li>Shoulder stand, Viparitikarani, Boat Pose, Fish Pose, Cobra Pose, Bow Pose, Fetal Pose.
+                        </li>
+                        <li>All sitting forward bends, especially Upavistha Konasana, and Kunnasana (Tortoise),
+                            Paschimottanasana.
+                        </li>
+                        <li>Twists like Ardha Matsyendrasana II and Maricyasana.
+                        </li>
+                        <li>
+                            Yoga Mudra (Yogic Seal), Corpse Pose.
+                        </li>
+
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div style="text-align: center;">
+        <button class="btn btn-primary" onclick="window.location.href='{% url 'submit_guna' %}'">Take the
+            Guna(Sattva-Rajas-Tamas) Survey
+        </button>
+    </div>
+</body>
