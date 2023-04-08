@@ -241,8 +241,12 @@ header {
 }
 
 @media screen and (max-width: 1120px) {
+    .image-div {
+        display: none;
+    }
+
     .logo {
-        width: 150px;
+        width: 120px;
         position: static;
     }
 
@@ -257,13 +261,29 @@ header {
 
     .topnav a.icon {
         float: right;
-        display: block;
+        display: none;
     }
 
     #active {
-        display: none;
+        display: block;
+        float: right;
     }
 }
+
+@media screen and (max-width: 525px) {
+    #active {
+        float: right;
+        width: min-content;
+    }
+
+    .logo {
+        width: max-content;
+        position: static;
+        margin-top: 20px;
+    }
+
+}
+
 
 @media screen and (max-width: 1120px) {
     .topnav.responsive {
