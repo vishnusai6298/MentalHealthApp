@@ -17,10 +17,9 @@
 <body>
   <header id="header">
   <div class="topnav" id="myTopnav">
-    <a id='logo-link' href="#"><img class="logo" src="" alt=""></a>
-    <a id="active" href="#">Grievance Portal</a>
-    <a href="#">Predict</a>
-    <a href="#">Train</a>
+    <a id='logo-link' href="#"><img class="logo" src="https://www.som.iitb.ac.in/wp-content/uploads/2016/08/SOM-IITB@2x.png" alt=""></a>
+    <a id="active" href="#">Mental Dosha Survey</a>
+    
 
     <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="NavBar()">&#9776;</a>
   </div>
@@ -35,7 +34,7 @@
 
         <form class="survey-form" method="POST" action="{% url 'submit_mentaldosha' %}">
   {% csrf_token %}
-  <div class="question-container">
+  <div class="question-container" id='q1'>
     <h3 class="question-heading">Question 1</h3>
     <div class="form-group">
       <p class="question-label">{{ form.q1.label }}</p>
