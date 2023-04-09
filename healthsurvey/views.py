@@ -92,7 +92,7 @@ def submit_mentaldosha(request):
                 return redirect('vatta_pitta_kapha')
     else:
         form = MentalHealthSurveyForm()
-        return render(request, 'survey/survey4.html', {'form': form})
+        return render(request, 'survey/mentalDoshaSurvey.html', {'form': form})
         # return redirect('form')
 
 
