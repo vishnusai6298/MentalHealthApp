@@ -275,7 +275,7 @@ body {
     .home-buttons {
         display: flex;
         flex-wrap: wrap;
-        margin: 100px;
+        margin: 100px 5%;
         justify-content: space-around;
     }
 }
