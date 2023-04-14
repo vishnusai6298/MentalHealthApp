@@ -1,5 +1,3 @@
-
-
 {% load static %}
 
 <!DOCTYPE html>
@@ -8,7 +6,8 @@
 <head>
   <meta charset="UTF-8">
   <title>Personality Survey Form</title>
-  {% comment %} <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  {% comment %}
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
   <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}"> {% endcomment %}
   <link rel="stylesheet" href="{% static 'css/mentalDoshaSurvey.css' %}">
 
@@ -16,187 +15,189 @@
 
 <body>
   <header id="header">
-  <div class="topnav" id="myTopnav">
-    <a id='logo-link' href="#"><img class="logo" src="https://www.som.iitb.ac.in/wp-content/uploads/2016/08/SOM-IITB@2x.png" alt=""></a>
-    <a id="active" href="#">Mental Dosha Survey</a>
-    
+    <div class="topnav" id="myTopnav">
+      <a id='logo-link' href="#"><img class="logo"
+          src="https://www.som.iitb.ac.in/wp-content/uploads/2016/08/SOM-IITB@2x.png" alt=""></a>
+      <a id="active" href="#">Dosha Survey(Mental)</a>
 
-    <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="NavBar()">&#9776;</a>
-  </div>
-</header>
-<div class='survey-master'>
- 
-  <div class= 'image-div'>
-     <img class='survey-image' src="https://svgsilh.com/svg/310119.svg" alt="Girl in a jacket" width="500" height="600">
-  </div>
-      <div >
-        <h2 >Mental Dosha Survey</h2>
 
-        <form class="survey-form" method="POST" action="{% url 'submit_mentaldosha' %}">
-  {% csrf_token %}
-  <div class="question-container" id='q1'>
-    <h3 class="question-heading">Question 1</h3>
-    <div class="form-group">
-      <p class="question-label">{{ form.q1.label }}</p>
-      {% for radio in form.q1 %}
-      <div class="form-check">
-        {{ radio.tag }}
-        <label class="radio-label" for="{{ radio.id}}">{{ radio.choice_label }}</label>
-      </div>
-      {% endfor %}
+      <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="NavBar()">&#9776;</a>
     </div>
-  </div>
+  </header>
+  <div class='survey-master'>
 
-
-
-
-          <div class="question-container">
-    <h3 class="question-heading">Question 2</h3>
-    <div class="form-group">
-      <p class="question-label">{{ form.q2.label }}</p>
-      {% for radio in form.q2 %}
-      <div class="form-check">
-        {{ radio.tag }}
-        <label class="radio-label" for="{{ radio.id}}">{{ radio.choice_label }}</label>
-      </div>
-      {% endfor %}
+    <div class='image-div'>
+      <img class='survey-image' src="https://svgsilh.com/svg/310119.svg" alt="Girl in a jacket" width="500"
+        height="600">
     </div>
-  </div>
+    <div>
+      <h2>Dosha Survey(Mental)</h2>
+
+      <form class="survey-form" method="POST" action="{% url 'submit_mentaldosha' %}">
+        {% csrf_token %}
+        <div class="question-container" id='q1'>
+          <h3 class="question-heading">Question 1</h3>
+          <div class="form-group">
+            <p class="question-label">{{ form.q1.label }}</p>
+            {% for radio in form.q1 %}
+            <div class="form-check">
+              {{ radio.tag }}
+              <label class="radio-label" for="{{ radio.id}}">{{ radio.choice_label }}</label>
+            </div>
+            {% endfor %}
+          </div>
+        </div>
 
 
-         <div class="question-container">
-    <h3 class="question-heading">Question 3</h3>
-    <div class="form-group">
-      <p class="question-label">{{ form.q3.label }}</p>
-      {% for radio in form.q3 %}
-      <div class="form-check">
-        {{ radio.tag }}
-        <label class="radio-label" for="{{ radio.id}}">{{ radio.choice_label }}</label>
-      </div>
-      {% endfor %}
-    </div>
-  </div>
 
-          <div class="question-container">
-    <h3 class="question-heading">Question 4</h3>
-    <div class="form-group">
-      <p class="question-label">{{ form.q4.label }}</p>
-      {% for radio in form.q4 %}
-      <div class="form-check">
-        {{ radio.tag }}
-        <label class="radio-label" for="{{ radio.id}}">{{ radio.choice_label }}</label>
-      </div>
-      {% endfor %}
-    </div>
-  </div>
-
-   <div class="question-container">
-    <h3 class="question-heading">Question 5</h3>
-    <div class="form-group">
-      <p class="question-label">{{ form.q5.label }}</p>
-      {% for radio in form.q5 %}
-      <div class="form-check">
-        {{ radio.tag }}
-        <label class="radio-label" for="{{ radio.id}}">{{ radio.choice_label }}</label>
-      </div>
-      {% endfor %}
-    </div>
-  </div>
-<div class="question-container">
-    <h3 class="question-heading">Question 6</h3>
-    <div class="form-group">
-      <p class="question-label">{{ form.q6.label }}</p>
-      {% for radio in form.q6 %}
-      <div class="form-check">
-        {{ radio.tag }}
-        <label class="radio-label" for="{{ radio.id}}">{{ radio.choice_label }}</label>
-      </div>
-      {% endfor %}
-    </div>
-  </div>
-
- <div class="question-container">
-    <h3 class="question-heading">Question 7</h3>
-    <div class="form-group">
-      <p class="question-label">{{ form.q7.label }}</p>
-      {% for radio in form.q7 %}
-      <div class="form-check">
-        {{ radio.tag }}
-        <label class="radio-label" for="{{ radio.id}}">{{ radio.choice_label }}</label>
-      </div>
-      {% endfor %}
-    </div>
-  </div>
 
         <div class="question-container">
-    <h3 class="question-heading">Question 8</h3>
-    <div class="form-group">
-      <p class="question-label">{{ form.q8.label }}</p>
-      {% for radio in form.q8 %}
-      <div class="form-check">
-        {{ radio.tag }}
-        <label class="radio-label" for="{{ radio.id}}">{{ radio.choice_label }}</label>
-      </div>
-      {% endfor %}
-    </div>
-  </div>
+          <h3 class="question-heading">Question 2</h3>
+          <div class="form-group">
+            <p class="question-label">{{ form.q2.label }}</p>
+            {% for radio in form.q2 %}
+            <div class="form-check">
+              {{ radio.tag }}
+              <label class="radio-label" for="{{ radio.id}}">{{ radio.choice_label }}</label>
+            </div>
+            {% endfor %}
+          </div>
+        </div>
 
-   <div class="question-container">
-    <h3 class="question-heading">Question 9</h3>
-    <div class="form-group">
-      <p class="question-label">{{ form.q9.label }}</p>
-      {% for radio in form.q9 %}
-      <div class="form-check">
-        {{ radio.tag }}
-        <label class="radio-label" for="{{ radio.id}}">{{ radio.choice_label }}</label>
-      </div>
-      {% endfor %}
-    </div>
-  </div>
 
-    <div class="question-container">
-    <h3 class="question-heading">Question 10</h3>
-    <div class="form-group">
-      <p class="question-label">{{ form.q10.label }}</p>
-      {% for radio in form.q10 %}
-      <div class="form-check">
-        {{ radio.tag }}
-        <label class="radio-label" for="{{ radio.id}}">{{ radio.choice_label }}</label>
-      </div>
-      {% endfor %}
-    </div>
-  </div>
+        <div class="question-container">
+          <h3 class="question-heading">Question 3</h3>
+          <div class="form-group">
+            <p class="question-label">{{ form.q3.label }}</p>
+            {% for radio in form.q3 %}
+            <div class="form-check">
+              {{ radio.tag }}
+              <label class="radio-label" for="{{ radio.id}}">{{ radio.choice_label }}</label>
+            </div>
+            {% endfor %}
+          </div>
+        </div>
 
-    <div class="question-container">
-    <h3 class="question-heading">Question 11</h3>
-    <div class="form-group">
-      <p class="question-label">{{ form.q11.label }}</p>
-      {% for radio in form.q11 %}
-      <div class="form-check">
-        {{ radio.tag }}
-        <label class="radio-label" for="{{ radio.id}}">{{ radio.choice_label }}</label>
-      </div>
-      {% endfor %}
-    </div>
-  </div>
+        <div class="question-container">
+          <h3 class="question-heading">Question 4</h3>
+          <div class="form-group">
+            <p class="question-label">{{ form.q4.label }}</p>
+            {% for radio in form.q4 %}
+            <div class="form-check">
+              {{ radio.tag }}
+              <label class="radio-label" for="{{ radio.id}}">{{ radio.choice_label }}</label>
+            </div>
+            {% endfor %}
+          </div>
+        </div>
 
-          <div class="question-container">
-    <h3 class="question-heading">Question 12</h3>
-    <div class="form-group">
-      <p class="question-label">{{ form.q12.label }}</p>
-      {% for radio in form.q12 %}
-      <div class="form-check">
-        {{ radio.tag }}
-        <label class="radio-label" for="{{ radio.id}}">{{ radio.choice_label }}</label>
-      </div>
-      {% endfor %}
+        <div class="question-container">
+          <h3 class="question-heading">Question 5</h3>
+          <div class="form-group">
+            <p class="question-label">{{ form.q5.label }}</p>
+            {% for radio in form.q5 %}
+            <div class="form-check">
+              {{ radio.tag }}
+              <label class="radio-label" for="{{ radio.id}}">{{ radio.choice_label }}</label>
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+        <div class="question-container">
+          <h3 class="question-heading">Question 6</h3>
+          <div class="form-group">
+            <p class="question-label">{{ form.q6.label }}</p>
+            {% for radio in form.q6 %}
+            <div class="form-check">
+              {{ radio.tag }}
+              <label class="radio-label" for="{{ radio.id}}">{{ radio.choice_label }}</label>
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+
+        <div class="question-container">
+          <h3 class="question-heading">Question 7</h3>
+          <div class="form-group">
+            <p class="question-label">{{ form.q7.label }}</p>
+            {% for radio in form.q7 %}
+            <div class="form-check">
+              {{ radio.tag }}
+              <label class="radio-label" for="{{ radio.id}}">{{ radio.choice_label }}</label>
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+
+        <div class="question-container">
+          <h3 class="question-heading">Question 8</h3>
+          <div class="form-group">
+            <p class="question-label">{{ form.q8.label }}</p>
+            {% for radio in form.q8 %}
+            <div class="form-check">
+              {{ radio.tag }}
+              <label class="radio-label" for="{{ radio.id}}">{{ radio.choice_label }}</label>
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+
+        <div class="question-container">
+          <h3 class="question-heading">Question 9</h3>
+          <div class="form-group">
+            <p class="question-label">{{ form.q9.label }}</p>
+            {% for radio in form.q9 %}
+            <div class="form-check">
+              {{ radio.tag }}
+              <label class="radio-label" for="{{ radio.id}}">{{ radio.choice_label }}</label>
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+
+        <div class="question-container">
+          <h3 class="question-heading">Question 10</h3>
+          <div class="form-group">
+            <p class="question-label">{{ form.q10.label }}</p>
+            {% for radio in form.q10 %}
+            <div class="form-check">
+              {{ radio.tag }}
+              <label class="radio-label" for="{{ radio.id}}">{{ radio.choice_label }}</label>
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+
+        <div class="question-container">
+          <h3 class="question-heading">Question 11</h3>
+          <div class="form-group">
+            <p class="question-label">{{ form.q11.label }}</p>
+            {% for radio in form.q11 %}
+            <div class="form-check">
+              {{ radio.tag }}
+              <label class="radio-label" for="{{ radio.id}}">{{ radio.choice_label }}</label>
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+
+        <div class="question-container">
+          <h3 class="question-heading">Question 12</h3>
+          <div class="form-group">
+            <p class="question-label">{{ form.q12.label }}</p>
+            {% for radio in form.q12 %}
+            <div class="form-check">
+              {{ radio.tag }}
+              <label class="radio-label" for="{{ radio.id}}">{{ radio.choice_label }}</label>
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+        <input class="button-87" type="submit" value="Submit">
+      </form>
     </div>
+
   </div>
-          <input  class="button-87" type="submit" value="Submit">
-        </form>
-      </div>
-    
-</div>
 
 </body>
 

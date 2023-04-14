@@ -25,7 +25,9 @@ def submit_physical(request):
             print("vatta_count"+str(vatta_count))
             print("pitta_count"+str(pitta_count))
             print("kapha_count"+str(kapha_count))
+            global physicaldosha
             if vatta_count >= 30:
+
                 physicaldosha = 'vatta'
                 return redirect('vatta1')
             elif pitta_count >= 30:
@@ -47,8 +49,14 @@ def submit_physical(request):
                 return redirect('vatta_pitta_kapha1')
     else:
         form = PhysicalDoshaSurveyForm()
-        return render(request, 'survey/survey6.html', {'form': form})
+        return render(request, 'survey/doshasurveyphysical.html', {'form': form})
         # return redirect('form')
+
+
+def results(request):
+    data = {'guna': guna, 'physicaldosha': physicaldosha,
+            'mentaldosha': mentaldosha}
+    return render(request, 'survey/results.html', data)
 
 
 def submit_mentaldosha(request):
@@ -70,6 +78,8 @@ def submit_mentaldosha(request):
             print("vatta_count"+str(vatta_count))
             print("pitta_count"+str(pitta_count))
             print("kapha_count"+str(kapha_count))
+            global mentaldosha
+
             if vatta_count >= 7:
                 mentaldosha = 'vatta'
                 return redirect('vatta')
@@ -97,7 +107,9 @@ def submit_mentaldosha(request):
 
 
 def home(request):
-    return render(request, 'survey/home.html')
+    data = {'guna': guna, 'physicaldosha': physicaldosha,
+            'mentaldosha': mentaldosha}
+    return render(request, 'survey/home.html', data)
 
 
 def form_physical(request):
@@ -124,6 +136,8 @@ def submit_guna(request):
             print("sattva_count"+str(sattva_count))
             print("rajas_count"+str(rajas_count))
             print("tamas_count"+str(tamas_count))
+            global guna
+
             if sattva_count >= 18:
                 guna = 'sattva'
                 return redirect('sattva')
@@ -147,7 +161,7 @@ def submit_guna(request):
                 return redirect('vatta_pitta_kapha')
     else:
         form = PhysicalSurveyForm()
-        return render(request, 'survey/survey5.html', {'form': form})
+        return render(request, 'survey/gunasurvey.html', {'form': form})
 
 
 def sattvic_tamas(request):

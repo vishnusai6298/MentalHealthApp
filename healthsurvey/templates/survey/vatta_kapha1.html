@@ -4,52 +4,62 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Vatta Kapha Personality</title>
+    <title>Vatta-Kapha Personality</title>
+    {% comment %}
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
-    <link rel="stylesheet" href="{% static 'css/custom.css' %}">
-    <style>
-        .content {
-            display: block;
-            border: 1px solid #777;
-            border-radius: 2px;
-            font-family: inherit;
-            padding: 10px;
-            display: block;
-            width: 95%;
-        }
-    </style>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}"> {% endcomment %}
+    <link rel="stylesheet" href="{% static 'css/vatta.css' %}">
+
 </head>
 
 <body>
-    <div class="row justify-content-center">
+    <header id="header">
+        <div class="topnav" id="myTopnav">
+            <a id='logo-link' href="#"><img class="logo"
+                    src="https://www.som.iitb.ac.in/wp-content/uploads/2016/08/SOM-IITB@2x.png" alt=""></a>
+            <a id="active" href="#">Mental Dosha Survey Results</a>
 
-        <div class="col-md-6">
-            <div class="card-body">
-                <h2 class="card-title text-center">Vatta-Kapha</h2>
-                <div class="content">
-                    <p style="text-align: justify;">
-                        VK types lack energy, motivation and passion. They sometimes simply do not have the fire to get
-                        things
-                        started.
-                        They are often hypersensitive, and passive-dependent.
-                        They lack the energy to put plans into action.
-                        They will go out of their way to agree with what you have said.
-                        They have chameleon-style personalities where they can appear to be what people want them to be.
-                        They will
-                        often also blame themselves for others’ mistakes.
-                        They can be highly adaptable and humble.
-                        They tend to be naïve and need to be more realistic about other people and their motivations.
 
-                    </p>
+            <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="NavBar()">&#9776;</a>
+        </div>
+    </header>
+    <div class='content'>
+        <div>
+
+            <div>
+                <div>
+                    <h2>Vatta-Kapha</h2>
+                    <div class='para'>
+                        <p>
+                            VK types lack energy, motivation and passion. They sometimes simply do not have the fire to
+                            get
+                            things
+                            started.
+                            They are often hypersensitive, and passive-dependent.
+                            They lack the energy to put plans into action.
+                            They will go out of their way to agree with what you have said.
+                            They have chameleon-style personalities where they can appear to be what people want them to
+                            be.
+                            They will
+                            often also blame themselves for others’ mistakes.
+                            They can be highly adaptable and humble.
+                            They tend to be naïve and need to be more realistic about other people and their
+                            motivations.
+
+
+                        </p>
+
+
+
+
+                    </div>
+
                 </div>
-
             </div>
         </div>
-    </div>
-    <div style="text-align: center;">
-        <button class="btn btn-primary" onclick="window.location.href='{% url 'submit_guna' %}'">Take the
-            Guna(Sattva-Rajas-Tamas) Survey
-        </button>
-    </div>
+        <div>
+            <button class="button-87" onclick="window.location.href='{% url 'submit_guna' %}'">Take the
+                Guna(Sattva-Rajas-Tamas)
+            </button>
+        </div>
 </body>

@@ -1,0 +1,59 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Result</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/custom.css' %}">
+    <style>
+        .content {
+            display: block;
+            border: 1px solid #777;
+            border-radius: 2px;
+            font-family: inherit;
+            padding: 10px;
+            display: block;
+            width: 95%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="row justify-content-center">
+
+        <div class="col-md-6">
+            <div class="card-body">
+                <h2 class="card-title text-center">{{guna}}</h2>
+                <div class="content">
+                    <p style="text-align: justify;">
+                        {{info}}
+
+
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row justify-content-center">
+
+        <div class="col-md-6">
+            <div class="card-body">
+                <h2 class="card-title text-center">Guna - Dosha</h2>
+                <div class="content">
+                    <p style="text-align: justify;">
+                    <ul>
+                        <li>Your Dosha after Mental Survey is : {{mentaldosha}}</li>
+                        <li>Your Dosha after Mental Survey is : {{physicaldosha}} </li>
+                        <li>Guna : {{guna}}</li>
+                    </ul>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>

@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import home, vatta1, kapha1, pitta1, vatta_kapha1, vatta_pitta1, pitta_kapha1, vatta_pitta_kapha1, submit_physical, submit_mentaldosha, sattvic_rajas, sattvic_tamas, rajas_tamas, sattva, rajas, tamas, vatta, pitta, kapha, vatta_kapha, vatta_pitta, pitta_kapha, vatta_pitta_kapha, none, form_physical, submit_guna
+from .views import home, results, vatta1, kapha1, pitta1, vatta_kapha1, vatta_pitta1, pitta_kapha1, vatta_pitta_kapha1, submit_physical, submit_mentaldosha, sattvic_rajas, sattvic_tamas, rajas_tamas, sattva, rajas, tamas, vatta, pitta, kapha, vatta_kapha, vatta_pitta, pitta_kapha, vatta_pitta_kapha, none, form_physical, submit_guna
 
 urlpatterns = [
     # path('form', form_physical, name='form_physical'),
@@ -8,6 +8,8 @@ urlpatterns = [
     path('gunasurvey/', submit_guna, name='submit_guna'),
     path('physicaldoshasurvey/', submit_physical,
          name='submit_physical'),
+    path('results/', results, name='results'),
+
     path('vatta/', vatta, name='vatta'),
     path('pitta/', pitta, name='pitta'),
     path('kapha/', kapha, name='kapha'),
