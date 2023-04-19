@@ -5,104 +5,110 @@
 <head>
   <meta charset="UTF-8">
   <title>Vatta Personality</title>
-  {% comment %} <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  {% comment %}
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
   <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}"> {% endcomment %}
   <link rel="stylesheet" href="{% static 'css/vatta.css' %}">
-  
+
 </head>
 
 <body>
   <header id="header">
-  <div class="topnav" id="myTopnav">
-    <a id='logo-link' href="#"><img class="logo" src="https://www.som.iitb.ac.in/wp-content/uploads/2016/08/SOM-IITB@2x.png" alt=""></a>
-    <a id="active" href="#">Mental Dosha Survey Results</a>
-    
-
-    <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="NavBar()">&#9776;</a>
-  </div>
-</header>
-<div class='content' >
-  <div >
-
-    <div >
-      <div >
-        <h2 >Vatta</h2>
-        <div class='para'>
-          <p >
-            Vata types are quick and agile in their minds with often changing
-            interests and inclinations. They are talkative, informed and
-            intellectual and can understand many different points of view their minds easily
-            waver and can wander out of control. While they may have some knowledge of many
-            different subjects, the tend to lack in depth knowledge about one subject specifically.
-
-            They ack determinism and self confidence and often have a negative perception of themselves.
-            Vata types suffer most from fear, which is their first reaction to anything new or strange. They like to
-            worry easily get afflicted by anxiety, and usually lack stability. They get saced out and may be
-            absent-minded. Their memory and short-term and erratic. They suffer quickly from overwork and over-exercise
-            and tend to overextend themselves in whatever they do.
-            They are good at creative pursuits. They can be highly sociable and like to mix with people of all types.
-            But, when there is too much vata, they tend to become loners and hypersensitive to contact. This is
-            generally because they have too much to say and do not know how to relate it.
-            They are the most adaptable to change.
-            If there is too much vata, there is a lot of instability and agitation in the mind which results in
-            exccesive worrying and makes problems appear larger than they are. They are prone to premature action and
-            inappropriate action.
-            High vata manifests as fear, alienation, and possible nervous breakdowns. They can also suffer from
-            insomnia, tremors, palpitations and rapid shifts of mood.
+    <div class="topnav" id="myTopnav">
+      <a id='logo-link' href="{% url 'home' %}"><img class="logo"
+          src="https://www.som.iitb.ac.in/wp-content/uploads/2016/08/SOM-IITB@2x.png" alt=""></a>
+      <a id="active" href="#">Mental Dosha Survey Results</a>
 
 
-          </p>
+      <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="NavBar()">&#9776;</a>
+    </div>
+  </header>
+  <div class='content'>
+    <div>
 
-          <h4> Asanas: </h4>
+      <div>
+        <div>
+          <h2>Vatta</h2>
+          <div class='para'>
+            <p>
+              Vata types are quick and agile in their minds with often changing
+              interests and inclinations. They are talkative, informed and
+              intellectual and can understand many different points of view their minds easily
+              waver and can wander out of control. While they may have some knowledge of many
+              different subjects, the tend to lack in depth knowledge about one subject specifically.
+
+              They ack determinism and self confidence and often have a negative perception of themselves.
+              Vata types suffer most from fear, which is their first reaction to anything new or strange. They like to
+              worry easily get afflicted by anxiety, and usually lack stability. They get saced out and may be
+              absent-minded. Their memory and short-term and erratic. They suffer quickly from overwork and
+              over-exercise
+              and tend to overextend themselves in whatever they do.
+              They are good at creative pursuits. They can be highly sociable and like to mix with people of all types.
+              But, when there is too much vata, they tend to become loners and hypersensitive to contact. This is
+              generally because they have too much to say and do not know how to relate it.
+              They are the most adaptable to change.
+              If there is too much vata, there is a lot of instability and agitation in the mind which results in
+              exccesive worrying and makes problems appear larger than they are. They are prone to premature action and
+              inappropriate action.
+              High vata manifests as fear, alienation, and possible nervous breakdowns. They can also suffer from
+              insomnia, tremors, palpitations and rapid shifts of mood.
 
 
-          <p>
-            Vatas need to perform asanas in a way that reduces vata, starting with the right mental attitude. Asana
-            practice for vata types should emphasize the pelvic region and colon, the main sites of vata. They should
-            aim at releasing tension from the hips, lumbar spine and sacroiliac joints. In general, their asanas should
-            restrict movement to counter vata's tendency to excess activity.
+            </p>
 
-            Sitting postures are good for vata, particularly those that create strength and stillness in the lower
-            abdomen, like siddhasana (lotus pose) and vajrasana. Since vata tends to accumulate in the spine, making it
-            stiff, vatas should focus on keeping the spinal column supple by practicing spinal bending in every
-            direction. Spinal twists like matsyedrasana are excellent, removing vata from the nervous system.
+            <h4> Asanas: </h4>
 
-            Forward bends afford immediate relief for excess vata, producing calm and stillness. Backbends are excellent
-            for reducing vata but must be done gently and slowly to be effective. Small backward bends, like cobra and
-            locust, are the safest in this regard. Standing postures that emphasize strength, stability and calm are
-            very good for vata, particularly those that aim at developing stillness and balance like the tree pose
-            (vrksasana).
-          </p>
 
-          <ul>
-            <li>Sitting poses like Lotus Pose (Siddhasana), Diamond Pose (Vaj rasana), Lion Pose, and Virasana.
-            </li>
-            <li>Sun Salutation done slowly and consciously
-            </li>
-            <li>Standing poses like the Vrksasana (Tree Pose), Trikonasana (Triangle), Virabhadrasana (Warrior Poses),
-              Parighasana (Gate Pose) and all standing forward bends.
-            </li>
-            <li>Inverted poses like Headstand, and Viparitakarani (a relaxing inversion).</li>
-            <li>Cobras and Locusts (simple back bending), done consciously and carefully.</li>
-            <li>Forward bends of all types, especially Janu Sirsasana (head knee forward bend) and Paschimottanansana
-              (full forward bend).
-            </li>
-            <li>Fetal position, Kurmasana (Tortoise), Parivrtta Janu Sirsasana (turning head-knee), Navasana (Boat
-              Pose), Yoga Mudra (Yogic Seal).
-            </li>
-            <li>Spinal twists, especially lying twists, Bharadvajasana II (Sage Twist), Pasasana (Noose twist).
-            </li>
-            <li>Corpse pose: vatas must do a long and comfortable relaxation of at least 20 minutes.
-            </li>
-          </ul>
+            <p>
+              Vatas need to perform asanas in a way that reduces vata, starting with the right mental attitude. Asana
+              practice for vata types should emphasize the pelvic region and colon, the main sites of vata. They should
+              aim at releasing tension from the hips, lumbar spine and sacroiliac joints. In general, their asanas
+              should
+              restrict movement to counter vata's tendency to excess activity.
+
+              Sitting postures are good for vata, particularly those that create strength and stillness in the lower
+              abdomen, like siddhasana (lotus pose) and vajrasana. Since vata tends to accumulate in the spine, making
+              it
+              stiff, vatas should focus on keeping the spinal column supple by practicing spinal bending in every
+              direction. Spinal twists like matsyedrasana are excellent, removing vata from the nervous system.
+
+              Forward bends afford immediate relief for excess vata, producing calm and stillness. Backbends are
+              excellent
+              for reducing vata but must be done gently and slowly to be effective. Small backward bends, like cobra and
+              locust, are the safest in this regard. Standing postures that emphasize strength, stability and calm are
+              very good for vata, particularly those that aim at developing stillness and balance like the tree pose
+              (vrksasana).
+            </p>
+
+            <ul>
+              <li>Sitting poses like Lotus Pose (Siddhasana), Diamond Pose (Vaj rasana), Lion Pose, and Virasana.
+              </li>
+              <li>Sun Salutation done slowly and consciously
+              </li>
+              <li>Standing poses like the Vrksasana (Tree Pose), Trikonasana (Triangle), Virabhadrasana (Warrior Poses),
+                Parighasana (Gate Pose) and all standing forward bends.
+              </li>
+              <li>Inverted poses like Headstand, and Viparitakarani (a relaxing inversion).</li>
+              <li>Cobras and Locusts (simple back bending), done consciously and carefully.</li>
+              <li>Forward bends of all types, especially Janu Sirsasana (head knee forward bend) and Paschimottanansana
+                (full forward bend).
+              </li>
+              <li>Fetal position, Kurmasana (Tortoise), Parivrtta Janu Sirsasana (turning head-knee), Navasana (Boat
+                Pose), Yoga Mudra (Yogic Seal).
+              </li>
+              <li>Spinal twists, especially lying twists, Bharadvajasana II (Sage Twist), Pasasana (Noose twist).
+              </li>
+              <li>Corpse pose: vatas must do a long and comfortable relaxation of at least 20 minutes.
+              </li>
+            </ul>
+          </div>
+
         </div>
-
       </div>
     </div>
-  </div>
-  <div >
-    <button class="button-87" onclick="window.location.href='{% url 'submit_physical' %}'">Take the Physical
-      Survey
-    </button>
-  </div>
+    <div>
+      <button class="button-87" onclick="window.location.href='{% url 'submit_physical' %}'">Take the Physical
+        Survey
+      </button>
+    </div>
 </body>
