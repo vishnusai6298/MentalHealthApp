@@ -15,7 +15,7 @@
 <body>
   <header id="header">
     <div class="topnav" id="myTopnav">
-      <a id='logo-link' href="#"><img class="logo"
+      <a id='logo-link' href="{% url 'home' %}"><img class="logo"
           src="https://www.som.iitb.ac.in/wp-content/uploads/2016/08/SOM-IITB@2x.png" alt=""></a>
       <a id="active" href="#">Welcome to Survey</a>
 
@@ -28,21 +28,24 @@
   {% comment %}<button class="btn btn-primary" onclick="window.location.href='{% url 'submit' %}'">Take the Mental
     Health{% endcomment %}
     <div class='home-buttons'>
-      <button class="button-57" role="button"><span class="text"><img class='home-button-image'
-            src="https://npr.brightspotcdn.com/dims4/default/faf66be/2147483647/strip/true/crop/1024x719+0+0/resize/880x618!/quality/90/?url=http%3A%2F%2Fnpr-brightspot.s3.amazonaws.com%2Flegacy%2Fsites%2Fkstx%2Ffiles%2F201808%2FMentalHealth_Flickr.jpg"
-            alt="Button Image"></span><span>Dosha Survey(Mental)<br><br>Check your mental health with this
-          survey</span></button>
-      <button class="button-57" role="button"><span class="text"><img class='home-button-image'
-            src="https://img.freepik.com/premium-vector/vector-illustration-with-woman-doing-physical-activity-healthy-girl-fit-shadow-shape-isolated-white-background-fitness-yoga-meditation-logo-healthy-lifestyle-home-studio-print_550143-683.jpg?w=360"
-            alt="Button Image"></span><span>Dosha Survey(Physical)<br><br>Check your physical health with this
-          survey</span></button>
-      <button class="button-57" role="button"><span class="text"><img class='home-button-image'
-            src="https://img.freepik.com/premium-vector/employee-personal-file-concept-human-resources-choice-career-employment-cv-job-search-professional-skill-modern-flat-vector-illustration-concept-isolated-white-background_97843-2346.jpg?w=2000"
-            alt="Button Image"></span><span>Guna<br><br>Check your Guna with this survey</span></button>
-    </div>
-    <div class="container">
-      <h1 contenteditable>Results</h1>
-
+      <a href="{% url 'submit_mentaldosha' %}">
+        <button class="button-57" role="button"><span class="text"><img class='home-button-image'
+              src="https://npr.brightspotcdn.com/dims4/default/faf66be/2147483647/strip/true/crop/1024x719+0+0/resize/880x618!/quality/90/?url=http%3A%2F%2Fnpr-brightspot.s3.amazonaws.com%2Flegacy%2Fsites%2Fkstx%2Ffiles%2F201808%2FMentalHealth_Flickr.jpg"
+              alt="Button Image"></span><span>Dosha Survey(Mental)<br><br>Check your Dosha(Vatta,Pitta,Kapha) by
+            answering these questions related to mental aspects</span></button>
+      </a>
+      <a href="{% url 'submit_physical' %}">
+        <button class="button-57" role="button"><span class="text"><img class='home-button-image'
+              src="https://img.freepik.com/premium-vector/vector-illustration-with-woman-doing-physical-activity-healthy-girl-fit-shadow-shape-isolated-white-background-fitness-yoga-meditation-logo-healthy-lifestyle-home-studio-print_550143-683.jpg?w=360"
+              alt="Button Image"></span><span>Dosha Survey(Physical)<br><br>Check your physical Dosha with this
+            survey</span></button>
+      </a>
+      <a href="{% url 'submit_guna' %}">
+        <button class="button-57" role="button"><span class="text"><img class='home-button-image'
+              src="https://img.freepik.com/premium-vector/employee-personal-file-concept-human-resources-choice-career-employment-cv-job-search-professional-skill-modern-flat-vector-illustration-concept-isolated-white-background_97843-2346.jpg?w=2000"
+              alt="Button Image"></span><span>Guna<br><br>Check your Guna(Sattva,Rajas,Tamas) with this
+            survey</span></button>
+      </a>
     </div>
 </body>
 

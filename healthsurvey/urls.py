@@ -3,8 +3,8 @@ from .views import home, results, vatta1, kapha1, pitta1, vatta_kapha1, vatta_pi
 
 urlpatterns = [
     # path('form', form_physical, name='form_physical'),
-    path('', home, name='home'),
-    path('mentaldoshasurvey/', submit_mentaldosha, name='submit_mentaldosha'),
+    path('home/', home, name='home'),
+    path('doshasurvey/', submit_mentaldosha, name='submit_mentaldosha'),
     path('gunasurvey/', submit_guna, name='submit_guna'),
     path('physicaldoshasurvey/', submit_physical,
          name='submit_physical'),
